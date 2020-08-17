@@ -14,7 +14,34 @@ let teamArr;
 
 const questions = [
     {
-        type: "emp"
+        type: "input",
+        message: "What is your manager's name?",
+        name: "name"
+    },
+    {
+        type: "input",
+        message: "What is your manager's ID?",
+        name: "id"
+    },
+    {
+        type: "input",
+        message: "What is your manager's Email?",
+        name: "email"
+    },
+    {
+        type: "input",
+        message: "What is your manager's Office Number?",
+        name: "officeNumber"
+    },
+    {
+        type: "list",
+        message: "Which type of Team Member would you like to add?",
+        name: "newEmployee",
+        choices: [
+            "Engineer",
+            "Intern",
+            "I don't want to add any more team members."
+        ]
     }
 ]
 
