@@ -11,10 +11,11 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
-const renderAsync = util.promisify(render);
+// const renderAsync = util.promisify(render);
 
 
 let employees = [];
+let template = "";
 
 const questionsManager = [
     {
@@ -105,8 +106,9 @@ const questionsEngineer = [
 const startQuestion = () => {
     inquirer.prompt(questionsManager)
         .then(function (res) {
-            const mngr = new Manager(this.name, this.id, this.email, this.officeNumber);
+            const mngr = new Manager(res.name, res.id, res.email, res.officeNumber);
             employees.push(mngr);
+            console.log(employees);
             buildTeam();
         });
 };
@@ -114,8 +116,9 @@ const startQuestion = () => {
 const startEngineer = () => {
     inquirer.prompt(questionsEngineer)
         .then(function (res) {
-            const eng = new Engineer(this.name, this.id, this.email, this.github);
+            const eng = new Engineer(res.name, res.id, res.email, res.github);
             employees.push(eng);
+            console.log(employees);
             buildTeam();
         });
 };
@@ -123,8 +126,9 @@ const startEngineer = () => {
 const startIntern = () => {
     inquirer.prompt(questionsIntern)
         .then(function (res) {
-            const int = new Intern(this.name, this.id, this.email, this.school);
+            const int = new Intern(res.name, res.id, res.email, res.school);
             employees.push(int);
+            console.log(employees);
             buildTeam();
         });
 };
@@ -132,20 +136,25 @@ const startIntern = () => {
 const buildTeam = () => {
     inquirer.prompt(questionsTeam)
         .then(function (res) {
-            if (this.newEmployee === "Engineer") {
+            if (res.newEmployee == "Engineer") {
                 startEngineer();
-            } else if (this.newEmployee === "Intern") {
+            } else if (res.newEmployee == "Intern") {
                 startIntern();
             } else {
-                renderAsync(employees)
-                    .then(fs.writeFile(outputPath, template, (err) => {
-                        if (err) throw err;
-                        console.log('Your team.html file has been saved in the Output folder.');
-                    }));
-            };
+                template = render(employees);
+                // fs.writeFile(outputPath, template, (err) => {
+                    //     if (err) throw err;
+                    //     console.log('Your team.html file has been saved in the Output folder.');
+                    // })
+                };
+                console.log(template);
         });
 };
 
+// fs.writeFile(outputPath, template, (err) => {
+//     if (err) throw err;
+//     console.log('Your team.html file has been saved in the Output folder.');
+// })
 
 startQuestion();
 
