@@ -22,12 +22,14 @@ const questionsManager = [
     {
         type: "input",
         message: "What is your manager's name?",
-        name: "name"
+        name: "name",
+        validate: Boolean
     },
     {
         type: "input",
         message: "What is your manager's ID?",
-        name: "id"
+        name: "id",
+        validate: Boolean
     },
     {
         type: "input",
@@ -46,7 +48,8 @@ const questionsManager = [
     {
         type: "input",
         message: "What is your manager's Office Number?",
-        name: "officeNumber"
+        name: "officeNumber",
+        validate: Boolean
     }
 ];
 
@@ -68,11 +71,14 @@ const questionsIntern = [
         type: "input",
         message: "What is your intern's name?",
         name: "name",
+        validate: Boolean
+        
     },
     {
         type: "input",
         message: "What is your intern's ID?",
-        name: "id"
+        name: "id",
+        validate: Boolean
     },
     {
         type: "input",
@@ -91,7 +97,8 @@ const questionsIntern = [
     {
         type: "input",
         message: "What is your intern's school?",
-        name: "school"
+        name: "school",
+        validate: Boolean
     }
 ];
 
@@ -99,12 +106,14 @@ const questionsEngineer = [
     {
         type: "input",
         message: "What is your engineer's name?",
-        name: "name"
+        name: "name",
+        validate: Boolean
     },
     {
         type: "input",
         message: "What is your engineer's ID?",
-        name: "id"
+        name: "id",
+        validate: Boolean
     },
     {
         type: "input",
@@ -123,7 +132,8 @@ const questionsEngineer = [
     {
         type: "input",
         message: "What is your engineer's GitHub username?",
-        name: "github"
+        name: "github",
+        validate: Boolean
     }
 ];
 
