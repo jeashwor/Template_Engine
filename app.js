@@ -141,14 +141,23 @@ const buildTeam = () => {
             } else if (res.newEmployee == "Intern") {
                 startIntern();
             } else {
-                template = render(employees);
-                // fs.writeFile(outputPath, template, (err) => {
-                    //     if (err) throw err;
-                    //     console.log('Your team.html file has been saved in the Output folder.');
-                    // })
-                };
-                console.log(template);
-        });
+                createHTML()
+                    .then(fs.writeFile(outputPath, template, (err) => {
+                        if (err) throw err;
+                        console.log('Your team.html file has been saved in the Output folder.');
+                    })
+                    );
+
+            }
+        }
+        )
+}
+
+
+
+
+async function createHTML() {
+    template = render(employees);
 };
 
 // fs.writeFile(outputPath, template, (err) => {
