@@ -32,7 +32,16 @@ const questionsManager = [
     {
         type: "input",
         message: "What is your manager's Email?",
-        name: "email"
+        name: "email",
+        validate: function (email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if (re.test(String(email).toLowerCase()) === true) {
+                return true;
+            } else {
+                console.log("\n Enter Valid email address.");
+                return false;
+            };
+        }
     },
     {
         type: "input",
@@ -68,7 +77,16 @@ const questionsIntern = [
     {
         type: "input",
         message: "What is your intern's email?",
-        name: "email"
+        name: "email",
+        validate: function (email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if (re.test(String(email).toLowerCase()) === true) {
+                return true;
+            } else {
+                console.log("\n Enter Valid email address.");
+                return false;
+            };
+        }
     },
     {
         type: "input",
@@ -91,7 +109,16 @@ const questionsEngineer = [
     {
         type: "input",
         message: "What is your engineer's email?",
-        name: "email"
+        name: "email",
+        validate: function (email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if (re.test(String(email).toLowerCase()) === true) {
+                return true;
+            } else {
+                console.log("\n Enter Valid email address.");
+                return false;
+            };
+        }
     },
     {
         type: "input",
