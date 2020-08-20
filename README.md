@@ -17,15 +17,15 @@ A simple command-line based application that will take in team data via prompts,
 
 * Locate Green "Code" button and select the clipboard to copy repo data.
 
-* ![GitHub Page](place link to new screen shot here)
+* ![GitHub Page](./assets/githubClone.png)
 
 * Using your preferred terminal application navigate to your desired location to copy the repository folder using the git clone command along with the info copied from the GitHub page in the above step.
 
-* ![GitHub Clone](Insert new screen shot file location here)
+    * ![GitHub Clone](./assets/git_Clone.gif)
 
 * Within the terminal navigate to the newly cloned folder and run an npm install command to install necessary modules.
 
-*![NPM Install](./utils/npmInstall.gif)
+    * ![NPM Install](./assets/npm_install.gif)
 
 * You are now ready to run the application!
 
