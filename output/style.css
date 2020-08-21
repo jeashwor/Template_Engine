@@ -1,0 +1,16 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: lightgray;
+    }
+    
+    h1 {
+        font-weight: bolder;
+    }
+    .jumbotron,
+    .card-header {
+        background-color: #4B9CD3;
+    }
+    
+    .employee-card {
+        margin: 0px 5px 5px 5px;
+    }
