@@ -40,7 +40,7 @@ A simple command-line based application that will take in team data via prompts,
     npm run start
     ```
 * Answer questions that follow to generate new team.html file in the output folder in this directory. 
-    * See gif below description for walk through!
+    * See full video walk through [here](https://drive.google.com/file/d/1Imd-KjF1z8E0ZBroN7KyrEDyoPyMWZyh/view?usp=sharing)
 
 
 ## Test
